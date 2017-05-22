@@ -1,0 +1,75 @@
+#include <stdio.h>
+
+int main(void) 
+{
+	int a, b, c, d, e;
+	printf("5명의 심사위원 점수입력");
+	scanf("%d%d%d%d%d", &a, &b, &c, &d, &e);
+
+	printf("유효숫자 : ");
+	//max찾기
+	if (a >= b&&a >= c&&a >= d&&a >= e) 
+	{
+		a == 0;
+	}
+
+	if (b >= a&&b >= c&&b >= d&&b >= e) 
+	{
+		b == 0;
+	}
+
+	if (c >= a&&c >= b&&c >= d&&c >= e) 
+	{
+		c == 0;
+	}
+	if (d >= a&&d >= b&&d >= c&&d >= e)
+	{
+		d == 0;
+	}
+	if (e >= a&&e >= b&&e >= d&&e >= d)
+	{
+		e == 0;
+	}
+
+	//min찾기
+	if (a <= b&&a <= c&&a <= d&&a <= e)
+	{
+		a == 0;
+	}
+	if (b <= a&&b <= c&&b <= d&&b <= e)
+	{
+		b == 0;
+	}
+	if (c <= b&&c <= a&&c <= d&&c <= e)
+	{
+		c == 0;
+	}
+	if (d <= b&&d <= c&&d <= a&&d <= e)
+	{
+		d == 0;
+	}
+	if (e <= b&&e <= c&&e <= d&&e <= a)
+	{
+		e == 0;
+	}
+
+	int ary[5] = { a,b,c,d,e };
+
+	int i;
+	for (i = 0; i < 5; i++) 
+	{
+		if (ary[i] == 0) 
+		{
+			return 0;
+		}
+		printf("%d", ary[i]);
+	}
+
+	int tot = a + b + c + d + e;
+	int avg = tot / 3;
+
+	printf("%d", avg);
+
+	return 0;
+
+}
